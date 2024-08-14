@@ -46,8 +46,8 @@ with open(full_path, 'r') as f:
 
     # Bulk insert data
     insert_query = """
-    INSERT INTO protest_events VALUES %s
-    ON CONFLICT (event_id_cnty) DO NOTHING
+    INSERT INTO your_table_name VALUES %s
+    ON CONFLICT (your_primary_key_column) DO NOTHING
     """
     execute_values(cursor, insert_query, data)
 
